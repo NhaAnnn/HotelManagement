@@ -150,8 +150,8 @@
             this.txtRoomType.CausesValidation = false;
             this.txtRoomType.FormattingEnabled = true;
             this.txtRoomType.Items.AddRange(new object[] {
-            "Phòng đơn",
-            "Phòng đôi"});
+            "Phòng giường đơn",
+            "Phòng giường đôi"});
             this.txtRoomType.Location = new System.Drawing.Point(205, 134);
             this.txtRoomType.Name = "txtRoomType";
             this.txtRoomType.Size = new System.Drawing.Size(194, 24);

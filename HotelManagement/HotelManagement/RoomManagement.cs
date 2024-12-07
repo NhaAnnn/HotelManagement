@@ -48,7 +48,7 @@ namespace HotelManagement
                 var matchingRentRoom = rentRooms.FirstOrDefault(r => r.nameRoom == room.nameRoom);
                 RoomCard card = new RoomCard(room, matchingRentRoom);
                
-                if (room.typeRoom == "Phòng đơn")
+                if (room.typeRoom == "Phòng giường đơn")
                 {
                     if (room.statusRoom == "Phòng trống")
                     {
@@ -63,7 +63,7 @@ namespace HotelManagement
                     card.Margin = new Padding(50, 10, 10, 10);
                     palSingleRoom.Controls.Add(card);
                 }
-                else if (room.typeRoom == "Phòng đôi")
+                else if (room.typeRoom == "Phòng giường đôi")
                 {
                     if (room.statusRoom == "Phòng trống")
                     {

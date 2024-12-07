@@ -50,7 +50,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -59,6 +58,7 @@
             this.txtTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.txtSumCost = new System.Windows.Forms.Label();
             this.txtCountDate = new System.Windows.Forms.Label();
             this.txtCostDetail = new System.Windows.Forms.Label();
@@ -274,7 +274,7 @@
             // btnClose
             // 
             this.btnClose.AutoRoundedCorners = true;
-            this.btnClose.BorderRadius = 16;
+            this.btnClose.BorderRadius = 19;
             this.btnClose.BorderThickness = 1;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -283,12 +283,12 @@
             this.btnClose.FillColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnClose.Location = new System.Drawing.Point(913, 25);
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.HoverState.ForeColor = System.Drawing.Color.Maroon;
+            this.btnClose.Location = new System.Drawing.Point(930, 24);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
             this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "X";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2PictureBox1
@@ -303,22 +303,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 47;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.AutoRoundedCorners = true;
-            this.btnPrint.BorderRadius = 16;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(844, 27);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(39, 35);
-            this.btnPrint.TabIndex = 47;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // guna2Panel2
             // 
@@ -393,11 +377,30 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.txtSumCost);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 689);
             this.panel1.TabIndex = 50;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.FillColor = System.Drawing.Color.White;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = global::HotelManagement.Properties.Resources.icons8_print_50;
+            this.btnPrint.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnPrint.Location = new System.Drawing.Point(850, 15);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(60, 60);
+            this.btnPrint.TabIndex = 58;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtSumCost
             // 
@@ -460,10 +463,8 @@
             this.Controls.Add(this.txtInvoiceId);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnPayment);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.txtBookingID);
@@ -505,7 +506,6 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -517,5 +517,6 @@
         private System.Windows.Forms.Label txtSumCost;
         private System.Windows.Forms.Label txtCountDate;
         private System.Windows.Forms.Label txtCostDetail;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }

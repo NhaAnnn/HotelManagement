@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
             this.txtCapacity = new System.Windows.Forms.TextBox();
             this.checkInDate = new System.Windows.Forms.DateTimePicker();
             this.checkOutDate = new System.Windows.Forms.DateTimePicker();
@@ -61,6 +60,7 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,20 +76,10 @@
             this.txtName.Size = new System.Drawing.Size(183, 30);
             this.txtName.TabIndex = 0;
             // 
-            // txtType
-            // 
-            this.txtType.CausesValidation = false;
-            this.txtType.Location = new System.Drawing.Point(122, 79);
-            this.txtType.Multiline = true;
-            this.txtType.Name = "txtType";
-            this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(183, 30);
-            this.txtType.TabIndex = 1;
-            // 
             // txtCapacity
             // 
             this.txtCapacity.CausesValidation = false;
-            this.txtCapacity.Location = new System.Drawing.Point(122, 115);
+            this.txtCapacity.Location = new System.Drawing.Point(122, 123);
             this.txtCapacity.Multiline = true;
             this.txtCapacity.Name = "txtCapacity";
             this.txtCapacity.ReadOnly = true;
@@ -117,7 +107,7 @@
             // txtPrice
             // 
             this.txtPrice.CausesValidation = false;
-            this.txtPrice.Location = new System.Drawing.Point(122, 151);
+            this.txtPrice.Location = new System.Drawing.Point(122, 163);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
@@ -138,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.CausesValidation = false;
-            this.label2.Location = new System.Drawing.Point(25, 86);
+            this.label2.Location = new System.Drawing.Point(25, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 16);
             this.label2.TabIndex = 12;
@@ -148,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.CausesValidation = false;
-            this.label3.Location = new System.Drawing.Point(25, 122);
+            this.label3.Location = new System.Drawing.Point(25, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 13;
@@ -158,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.CausesValidation = false;
-            this.label4.Location = new System.Drawing.Point(25, 158);
+            this.label4.Location = new System.Drawing.Point(25, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 14;
@@ -168,7 +158,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.CausesValidation = false;
-            this.label5.Location = new System.Drawing.Point(25, 194);
+            this.label5.Location = new System.Drawing.Point(25, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 15;
@@ -198,12 +188,12 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.txtType);
             this.panel1.Controls.Add(this.txtBookingID);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txtStatus);
             this.panel1.Controls.Add(this.txtCapacity);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtType);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtPrice);
@@ -213,13 +203,13 @@
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Location = new System.Drawing.Point(53, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 282);
+            this.panel1.Size = new System.Drawing.Size(343, 301);
             this.panel1.TabIndex = 20;
             // 
             // txtBookingID
             // 
             this.txtBookingID.CausesValidation = false;
-            this.txtBookingID.Location = new System.Drawing.Point(122, 223);
+            this.txtBookingID.Location = new System.Drawing.Point(122, 243);
             this.txtBookingID.Multiline = true;
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(183, 30);
@@ -229,7 +219,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.CausesValidation = false;
-            this.label14.Location = new System.Drawing.Point(25, 230);
+            this.label14.Location = new System.Drawing.Point(25, 250);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(81, 16);
             this.label14.TabIndex = 17;
@@ -238,7 +228,7 @@
             // txtStatus
             // 
             this.txtStatus.CausesValidation = false;
-            this.txtStatus.Location = new System.Drawing.Point(122, 187);
+            this.txtStatus.Location = new System.Drawing.Point(122, 203);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
@@ -270,7 +260,7 @@
             this.panel2.Controls.Add(this.label12);
             this.panel2.Location = new System.Drawing.Point(446, 26);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(343, 155);
+            this.panel2.Size = new System.Drawing.Size(343, 165);
             this.panel2.TabIndex = 21;
             // 
             // txtSDT
@@ -351,9 +341,9 @@
             this.panel3.Controls.Add(this.checkOutDate);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(446, 186);
+            this.panel3.Location = new System.Drawing.Point(446, 197);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(343, 122);
+            this.panel3.Size = new System.Drawing.Size(343, 130);
             this.panel3.TabIndex = 22;
             // 
             // label13
@@ -488,6 +478,16 @@
             this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtType
+            // 
+            this.txtType.CausesValidation = false;
+            this.txtType.Location = new System.Drawing.Point(122, 83);
+            this.txtType.Multiline = true;
+            this.txtType.Name = "txtType";
+            this.txtType.ReadOnly = true;
+            this.txtType.Size = new System.Drawing.Size(183, 30);
+            this.txtType.TabIndex = 1;
+            // 
             // RoomDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -517,7 +517,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.TextBox txtCapacity;
         private System.Windows.Forms.DateTimePicker checkInDate;
         private System.Windows.Forms.DateTimePicker checkOutDate;
@@ -549,5 +548,6 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private System.Windows.Forms.TextBox txtType;
     }
 }

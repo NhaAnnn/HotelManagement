@@ -58,19 +58,23 @@ namespace HotelManagement
         private async void btnSave_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            var updatedRoom = new Room
+            if(CheckRoomNull() && CheckCapa())
             {
-                nameRoom = txtName.Text.ToString(),
-                typeRoom = txtType.Text.ToString(),
-                capacityRoom = int.Parse(txtCapacity.Text),
-                priceRoom = decimal.Parse(txtPrice.Text),
-                statusRoom = txtStatus.Text,
-            };            
-            await roomService.UpdateRoomAsync(updatedRoom);
-            MessageBox.Show($"Phòng {room.nameRoom} đã được cập nhật thành công");      
-            RoomChanged?.Invoke(this, EventArgs.Empty);
-            EnableText(false);       
-            this.Close();
+                var updatedRoom = new Room
+                {
+                    nameRoom = txtName.Text.ToString(),
+                    typeRoom = txtType.Text.ToString(),
+                    capacityRoom = int.Parse(txtCapacity.Text),
+                    priceRoom = decimal.Parse(txtPrice.Text),
+                    statusRoom = txtStatus.Text,
+                };
+                await roomService.UpdateRoomAsync(updatedRoom);
+                MessageBox.Show($"Phòng {room.nameRoom} đã được cập nhật thành công");
+                RoomChanged?.Invoke(this, EventArgs.Empty);
+                EnableText(false);
+                this.Close();
+            }
+           
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -81,19 +85,28 @@ namespace HotelManagement
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = null;
-            await roomService.DeleteRoomAsync(room.nameRoom.ToString());
+            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa phòng này không?",
+                                        "Xác nhận xóa",
+                                        MessageBoxButtons.OKCancel,
+                                        MessageBoxIcon.Question);
 
-            var typeRoom = await typeRoomService.GetTypeRoomByTypeAsync(txtType.Text);
-            int toRoom = typeRoom.totalRoom - 1;
-            var updatedTypeRoom = new TypeRoom
+            if (confirmResult == DialogResult.OK)
             {
-                typeRoom = typeRoom.typeRoom,
-                totalRoom = toRoom,
-            };
-            await typeRoomService.UpdateTypeRoomAsync(updatedTypeRoom);
-            RoomChanged?.Invoke(this, EventArgs.Empty);
-            this.Close();
+                this.ActiveControl = null;
+                await roomService.DeleteRoomAsync(room.nameRoom.ToString());
+
+                var typeRoom = await typeRoomService.GetTypeRoomByTypeAsync(txtType.Text);
+                int toRoom = typeRoom.totalRoom - 1;
+                var updatedTypeRoom = new TypeRoom
+                {
+                    typeRoom = typeRoom.typeRoom,
+                    totalRoom = toRoom,
+                };
+                await typeRoomService.UpdateTypeRoomAsync(updatedTypeRoom);
+                RoomChanged?.Invoke(this, EventArgs.Empty);
+                this.Close();
+            }
+           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -181,6 +194,49 @@ namespace HotelManagement
                 return false;
             }
             return true;
+        }
+        private Boolean CheckRoomNull()
+        {
+            if (txtName.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Số phòng không được bỏ trống");
+                return false;
+            }
+            if (txtType.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Loại phòng không được bỏ trống");
+                return false;
+            }
+            if (!txtType.Text.Equals( "Phòng giường đơn") || !txtType.Text.Equals("Phòng giường đôi"))
+            {
+                MessageBox.Show($"Loại phòng không hợp lệ");
+                return false;
+            }
+            if (txtCapacity.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Số người không được bỏ trống");
+                return false;
+            }
+            if (txtPrice.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"GIá tiền không được bỏ trống");
+                return false;
+            }
+            
+            return true;
+        }
+        private Boolean CheckCapa()
+        {
+            try
+            {
+                int.Parse(txtCapacity.Text);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Số người không hợp lệ");
+                return false;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HotelManagement.Model;
 using HotelManagement.Service;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,19 +86,21 @@ namespace HotelManagement
                 txtPhone.Text = row.Cells[2].Value?.ToString();
                 txtType.Text = row.Cells[3].Value?.ToString();
                 txtDeposit.Text = row.Cells[4].Value?.ToString();
-                txtDateIn.Text = row.Cells[5].Value?.ToString();
-                txtDateOut.Text = row.Cells[6].Value?.ToString();
+                txtDateIn.Value = DateTime.Parse(row.Cells[5].Value?.ToString());
+                txtDateOut.Value = DateTime.Parse(row.Cells[6].Value?.ToString());
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            EnableText(true);
+            this.ActiveControl = null;
+            EnableText(false);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            EnableText(false);
+            this.ActiveControl = null;
+            EnableText(true);
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -134,13 +137,64 @@ namespace HotelManagement
 
         private void EnableText(Boolean a)
         {
-            txtID.ReadOnly = a;
+            
             txtName.ReadOnly = a;
             txtPhone.ReadOnly = a;
             txtType.ReadOnly = a;
             txtDeposit.ReadOnly = a;
-            txtDateIn.ReadOnly = a;
-            txtDateOut.ReadOnly = a;
+            txtDateIn.Enabled = !a;
+            txtDateOut.Enabled = !a;
+        }
+        private Boolean CheckNull()
+        {
+            if (txtName.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Tên Khách hàng không được bỏ trống");
+                return false;
+            }
+            if (txtPhone.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"SĐT Khách hàng không được bỏ trống");
+                return false;
+            }
+            if (txtType.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Loại phòng không được bỏ trống");
+                return false;
+            }
+            if (txtDeposit.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show($"Tiền cọc không được bỏ trống");
+                return false;
+            }
+            return true;
+        }
+        private Boolean CheckDate()
+        {
+            if (txtDateIn.Value == DateTime.Now)
+            {
+                MessageBox.Show($"Không thể đặt phòng với ngày nhận phòng là ngày hôm nay");
+                return false;
+            }
+            if (txtDateIn.Value >= txtDateOut.Value)
+            {
+                MessageBox.Show($"Ngày không hợp lệ");
+                return false;
+            }
+            return true;
+        }
+        private Boolean CheckPrice()
+        {
+            try
+            {
+                decimal.Parse(txtDeposit.Text);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Tiền cọc không hợp lệ");
+                return false;
+            }
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingRoom));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,14 +50,13 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtType = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDeposit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDateIn = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDateOut = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtDeposit = new System.Windows.Forms.TextBox();
+            this.txtDateIn = new System.Windows.Forms.DateTimePicker();
+            this.txtDateOut = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.daGridView)).BeginInit();
@@ -361,163 +359,71 @@
             // 
             // txtID
             // 
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtID.CausesValidation = false;
             this.txtID.Location = new System.Drawing.Point(1313, 310);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
-            this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "";
             this.txtID.ReadOnly = true;
-            this.txtID.SelectedText = "";
             this.txtID.Size = new System.Drawing.Size(229, 30);
-            this.txtID.TabIndex = 24;
+            this.txtID.TabIndex = 35;
             // 
             // txtName
             // 
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.CausesValidation = false;
             this.txtName.Location = new System.Drawing.Point(1313, 361);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
-            this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(229, 30);
-            this.txtName.TabIndex = 25;
+            this.txtName.TabIndex = 36;
             // 
             // txtPhone
             // 
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.CausesValidation = false;
             this.txtPhone.Location = new System.Drawing.Point(1313, 412);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "";
             this.txtPhone.ReadOnly = true;
-            this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(229, 30);
-            this.txtPhone.TabIndex = 26;
+            this.txtPhone.TabIndex = 37;
             // 
             // txtType
             // 
-            this.txtType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtType.DefaultText = "";
-            this.txtType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtType.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtType.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtType.CausesValidation = false;
             this.txtType.Location = new System.Drawing.Point(1313, 463);
-            this.txtType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtType.Multiline = true;
             this.txtType.Name = "txtType";
-            this.txtType.PasswordChar = '\0';
-            this.txtType.PlaceholderText = "";
             this.txtType.ReadOnly = true;
-            this.txtType.SelectedText = "";
             this.txtType.Size = new System.Drawing.Size(229, 30);
-            this.txtType.TabIndex = 27;
+            this.txtType.TabIndex = 38;
             // 
             // txtDeposit
             // 
-            this.txtDeposit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDeposit.DefaultText = "";
-            this.txtDeposit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDeposit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDeposit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDeposit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDeposit.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDeposit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeposit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDeposit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDeposit.CausesValidation = false;
             this.txtDeposit.Location = new System.Drawing.Point(1313, 514);
-            this.txtDeposit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDeposit.Multiline = true;
             this.txtDeposit.Name = "txtDeposit";
-            this.txtDeposit.PasswordChar = '\0';
-            this.txtDeposit.PlaceholderText = "";
             this.txtDeposit.ReadOnly = true;
-            this.txtDeposit.SelectedText = "";
             this.txtDeposit.Size = new System.Drawing.Size(229, 30);
-            this.txtDeposit.TabIndex = 28;
+            this.txtDeposit.TabIndex = 39;
             // 
             // txtDateIn
             // 
-            this.txtDateIn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateIn.DefaultText = "";
-            this.txtDateIn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateIn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateIn.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDateIn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateIn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDateIn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateIn.Location = new System.Drawing.Point(1313, 565);
-            this.txtDateIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDateIn.Enabled = false;
+            this.txtDateIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateIn.Location = new System.Drawing.Point(1313, 569);
             this.txtDateIn.Name = "txtDateIn";
-            this.txtDateIn.PasswordChar = '\0';
-            this.txtDateIn.PlaceholderText = "";
-            this.txtDateIn.ReadOnly = true;
-            this.txtDateIn.SelectedText = "";
-            this.txtDateIn.Size = new System.Drawing.Size(229, 30);
-            this.txtDateIn.TabIndex = 29;
+            this.txtDateIn.Size = new System.Drawing.Size(229, 22);
+            this.txtDateIn.TabIndex = 42;
             // 
             // txtDateOut
             // 
-            this.txtDateOut.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateOut.DefaultText = "";
-            this.txtDateOut.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateOut.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateOut.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDateOut.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDateOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateOut.Location = new System.Drawing.Point(1313, 616);
-            this.txtDateOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDateOut.Enabled = false;
+            this.txtDateOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateOut.Location = new System.Drawing.Point(1313, 620);
             this.txtDateOut.Name = "txtDateOut";
-            this.txtDateOut.PasswordChar = '\0';
-            this.txtDateOut.PlaceholderText = "";
-            this.txtDateOut.ReadOnly = true;
-            this.txtDateOut.SelectedText = "";
-            this.txtDateOut.Size = new System.Drawing.Size(229, 30);
-            this.txtDateOut.TabIndex = 30;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.txtDateOut.Size = new System.Drawing.Size(229, 22);
+            this.txtDateOut.TabIndex = 43;
             // 
             // BookingRoom
             // 
@@ -578,13 +484,12 @@
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtID;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2TextBox txtType;
-        private Guna.UI2.WinForms.Guna2TextBox txtDeposit;
-        private Guna.UI2.WinForms.Guna2TextBox txtDateIn;
-        private Guna.UI2.WinForms.Guna2TextBox txtDateOut;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtDeposit;
+        private System.Windows.Forms.DateTimePicker txtDateIn;
+        private System.Windows.Forms.DateTimePicker txtDateOut;
     }
 }

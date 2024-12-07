@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EIWrL6zKdmUPr4v7Wlr5YaiQ1+Jj1xmXU0XkEUIbEMUAOpOh9NlM9FBuaQKiJU7nK+RaEPByt/5zZoMEksfSfA==",
+  "dgSpecHash": "mFCzIiTYOVuCSgfZ3e8L1ECE3R4v3gz+LGtI69ja+h5XLenB7WugZe71vyH3Hgo07457W5HuCmhYKxxzxKM40A==",
   "success": true,
-  "projectFilePath": "D:\\Project\\HotelAPI\\HotelAPI.csproj",
+  "projectFilePath": "D:\\HotelManagement\\HotelManagement\\HotelAPI\\HotelAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TRONG NHAN\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\TRONG NHAN\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\HotelAPI\\HotelAPI.csproj": {}
+    "D:\\HotelManagement\\HotelManagement\\HotelAPI\\HotelAPI.csproj": {}
   },
   "projects": {
-    "D:\\Project\\HotelAPI\\HotelAPI.csproj": {
+    "D:\\HotelManagement\\HotelManagement\\HotelAPI\\HotelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\HotelAPI\\HotelAPI.csproj",
+        "projectUniqueName": "D:\\HotelManagement\\HotelManagement\\HotelAPI\\HotelAPI.csproj",
         "projectName": "HotelAPI",
-        "projectPath": "D:\\Project\\HotelAPI\\HotelAPI.csproj",
+        "projectPath": "D:\\HotelManagement\\HotelManagement\\HotelAPI\\HotelAPI.csproj",
         "packagesPath": "C:\\Users\\TRONG NHAN\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\HotelAPI\\obj\\",
+        "outputPath": "D:\\HotelManagement\\HotelManagement\\HotelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TRONG NHAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
