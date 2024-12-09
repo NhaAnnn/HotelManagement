@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -60,7 +61,8 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.txtType = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtDescrip = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -188,6 +190,8 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.txtDescrip);
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.txtType);
             this.panel1.Controls.Add(this.txtBookingID);
             this.panel1.Controls.Add(this.label14);
@@ -203,13 +207,23 @@
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Location = new System.Drawing.Point(53, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 301);
+            this.panel1.Size = new System.Drawing.Size(343, 409);
             this.panel1.TabIndex = 20;
+            // 
+            // txtType
+            // 
+            this.txtType.CausesValidation = false;
+            this.txtType.Location = new System.Drawing.Point(122, 83);
+            this.txtType.Multiline = true;
+            this.txtType.Name = "txtType";
+            this.txtType.ReadOnly = true;
+            this.txtType.Size = new System.Drawing.Size(183, 30);
+            this.txtType.TabIndex = 1;
             // 
             // txtBookingID
             // 
             this.txtBookingID.CausesValidation = false;
-            this.txtBookingID.Location = new System.Drawing.Point(122, 243);
+            this.txtBookingID.Location = new System.Drawing.Point(122, 352);
             this.txtBookingID.Multiline = true;
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(183, 30);
@@ -219,7 +233,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.CausesValidation = false;
-            this.label14.Location = new System.Drawing.Point(25, 250);
+            this.label14.Location = new System.Drawing.Point(25, 358);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(81, 16);
             this.label14.TabIndex = 17;
@@ -258,9 +272,9 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Location = new System.Drawing.Point(446, 26);
+            this.panel2.Location = new System.Drawing.Point(446, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(343, 165);
+            this.panel2.Size = new System.Drawing.Size(343, 170);
             this.panel2.TabIndex = 21;
             // 
             // txtSDT
@@ -341,9 +355,9 @@
             this.panel3.Controls.Add(this.checkOutDate);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(446, 197);
+            this.panel3.Location = new System.Drawing.Point(446, 254);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(343, 130);
+            this.panel3.Size = new System.Drawing.Size(343, 147);
             this.panel3.TabIndex = 22;
             // 
             // label13
@@ -375,7 +389,7 @@
             this.btnRent.HoverState.FillColor = System.Drawing.Color.Green;
             this.btnRent.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRent.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRent.Location = new System.Drawing.Point(106, 363);
+            this.btnRent.Location = new System.Drawing.Point(108, 474);
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(84, 40);
             this.btnRent.TabIndex = 11;
@@ -399,7 +413,7 @@
             this.btnSave.HoverState.FillColor = System.Drawing.Color.Blue;
             this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSave.Location = new System.Drawing.Point(243, 363);
+            this.btnSave.Location = new System.Drawing.Point(245, 474);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 40);
             this.btnSave.TabIndex = 12;
@@ -423,7 +437,7 @@
             this.btnUpdate.HoverState.FillColor = System.Drawing.Color.Blue;
             this.btnUpdate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(380, 363);
+            this.btnUpdate.Location = new System.Drawing.Point(382, 474);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(84, 40);
             this.btnUpdate.TabIndex = 13;
@@ -447,7 +461,7 @@
             this.btnDelete.HoverState.FillColor = System.Drawing.Color.Crimson;
             this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(517, 363);
+            this.btnDelete.Location = new System.Drawing.Point(519, 474);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(84, 40);
             this.btnDelete.TabIndex = 14;
@@ -471,29 +485,54 @@
             this.btnCancel.HoverState.FillColor = System.Drawing.Color.Blue;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(654, 363);
+            this.btnCancel.Location = new System.Drawing.Point(656, 474);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(84, 40);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtType
+            // label15
             // 
-            this.txtType.CausesValidation = false;
-            this.txtType.Location = new System.Drawing.Point(122, 83);
-            this.txtType.Multiline = true;
-            this.txtType.Name = "txtType";
-            this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(183, 30);
-            this.txtType.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.CausesValidation = false;
+            this.label15.Location = new System.Drawing.Point(25, 284);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 16);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Mô tả:";
+            // 
+            // txtDescrip
+            // 
+            this.txtDescrip.AllowDrop = true;
+            this.txtDescrip.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescrip.DefaultText = "";
+            this.txtDescrip.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescrip.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescrip.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescrip.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescrip.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescrip.ForeColor = System.Drawing.Color.Black;
+            this.txtDescrip.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescrip.Location = new System.Drawing.Point(122, 250);
+            this.txtDescrip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescrip.Multiline = true;
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.PasswordChar = '\0';
+            this.txtDescrip.PlaceholderText = "";
+            this.txtDescrip.ReadOnly = true;
+            this.txtDescrip.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescrip.SelectedText = "";
+            this.txtDescrip.Size = new System.Drawing.Size(183, 84);
+            this.txtDescrip.TabIndex = 19;
             // 
             // RoomDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(845, 439);
+            this.ClientSize = new System.Drawing.Size(845, 545);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -549,5 +588,7 @@
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.TextBox txtType;
+        private Guna.UI2.WinForms.Guna2TextBox txtDescrip;
+        private System.Windows.Forms.Label label15;
     }
 }

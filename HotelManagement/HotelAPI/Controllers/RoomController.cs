@@ -30,7 +30,8 @@ namespace HotelAPI.Controllers
                                 typeRoom = (string)reader["TypeRoom"],
                                 capacityRoom = (int)reader["CapacityRoom"],
                                 priceRoom = (decimal)reader["PriceRoom"],
-                                statusRoom = (string)reader["StatusRoom"]
+                                statusRoom = (string)reader["StatusRoom"],
+                                descriptionRoom = (string)reader["DescriptionRoom"]
                             });
                         }
                     }
@@ -61,7 +62,9 @@ namespace HotelAPI.Controllers
                                 typeRoom = (string)reader["TypeRoom"],
                                 capacityRoom = (int)reader["CapacityRoom"],
                                 priceRoom = (decimal)reader["PriceRoom"],
-                                statusRoom = (string)reader["StatusRoom"]
+                                statusRoom = (string)reader["StatusRoom"],
+                                descriptionRoom = (string)reader["DescriptionRoom"]
+
                             };
                         }
                     }
@@ -104,13 +107,14 @@ namespace HotelAPI.Controllers
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("INSERT INTO Room (NameRoom, TypeRoom, CapacityRoom, PriceRoom, StatusRoom) VALUES (@NameRoom, @TypeRoom, @CapacityRoom, @PriceRoom, @StatusRoom)", connection))
+                using (SqlCommand command = new SqlCommand("INSERT INTO Room (NameRoom, TypeRoom, CapacityRoom, PriceRoom, StatusRoom, DescriptionRoom) VALUES (@NameRoom, @TypeRoom, @CapacityRoom, @PriceRoom, @StatusRoom, @DescriptionRoom)", connection))
                 {
                     command.Parameters.AddWithValue("@NameRoom", room.nameRoom);
                     command.Parameters.AddWithValue("@TypeRoom", room.typeRoom);
                     command.Parameters.AddWithValue("@CapacityRoom", room.capacityRoom);
                     command.Parameters.AddWithValue("@PriceRoom", room.priceRoom);
                     command.Parameters.AddWithValue("@StatusRoom", room.statusRoom);
+                    command.Parameters.AddWithValue("@DescriptionRoom", room.descriptionRoom);
                     command.ExecuteNonQuery();
                 }
             }
@@ -124,12 +128,13 @@ namespace HotelAPI.Controllers
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("UPDATE Room SET TypeRoom = @TypeRoom, CapacityRoom = @CapacityRoom, PriceRoom = @PriceRoom, StatusRoom = @StatusRoom WHERE NameRoom = @NameRoom", connection))
+                using (SqlCommand command = new SqlCommand("UPDATE Room SET TypeRoom = @TypeRoom, CapacityRoom = @CapacityRoom, PriceRoom = @PriceRoom, StatusRoom = @StatusRoom, DescriptionRoom = @DescriptionRoom WHERE NameRoom = @NameRoom", connection))
                 {
                     command.Parameters.AddWithValue("@TypeRoom", room.typeRoom);
                     command.Parameters.AddWithValue("@CapacityRoom", room.capacityRoom);
                     command.Parameters.AddWithValue("@PriceRoom", room.priceRoom);
                     command.Parameters.AddWithValue("@StatusRoom", room.statusRoom);
+                    command.Parameters.AddWithValue("@DescriptionRoom", room.descriptionRoom);
                     command.Parameters.AddWithValue("@NameRoom", name);
                     command.ExecuteNonQuery();                 
                 }

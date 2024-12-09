@@ -52,7 +52,7 @@ namespace HotelManagement
             txtCapacity.Text = room.capacityRoom.ToString();
             txtPrice.Text = room.priceRoom.ToString();
             txtStatus.Text = room.statusRoom.ToString();
-         
+            txtDescrip.Text = room.descriptionRoom.ToString();
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -67,6 +67,7 @@ namespace HotelManagement
                     capacityRoom = int.Parse(txtCapacity.Text),
                     priceRoom = decimal.Parse(txtPrice.Text),
                     statusRoom = txtStatus.Text,
+                    descriptionRoom = txtDescrip.Text,
                 };
                 await roomService.UpdateRoomAsync(updatedRoom);
                 MessageBox.Show($"Phòng {room.nameRoom} đã được cập nhật thành công");
@@ -163,6 +164,7 @@ namespace HotelManagement
             txtType.ReadOnly = a;
             txtCapacity.ReadOnly = a;
             txtPrice.ReadOnly = a;
+            txtDescrip.ReadOnly = a;
         }
        
         private Boolean CheckNull()

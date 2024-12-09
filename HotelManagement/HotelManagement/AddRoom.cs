@@ -41,6 +41,7 @@ namespace HotelManagement
                     capacityRoom = int.Parse(txtRooomCapa.Text),
                     priceRoom = decimal.Parse(txtRoomPrice.Text),
                     statusRoom = txtRoomSta.Text,
+                    descriptionRoom = txtDescrip.Text,
                 };
                 await roomService.CreateRoomAsync(newRoom);
 

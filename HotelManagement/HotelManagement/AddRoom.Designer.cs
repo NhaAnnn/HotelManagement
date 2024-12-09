@@ -41,6 +41,8 @@
             this.txtRoomType = new System.Windows.Forms.ComboBox();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDescrip = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // txtRoomName
@@ -117,7 +119,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 252);
+            this.label5.Location = new System.Drawing.Point(111, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 9;
@@ -127,7 +129,7 @@
             // 
             this.txtRoomSta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRoomSta.CausesValidation = false;
-            this.txtRoomSta.Location = new System.Drawing.Point(205, 249);
+            this.txtRoomSta.Location = new System.Drawing.Point(205, 332);
             this.txtRoomSta.Name = "txtRoomSta";
             this.txtRoomSta.ReadOnly = true;
             this.txtRoomSta.Size = new System.Drawing.Size(194, 22);
@@ -173,7 +175,7 @@
             this.btnAddRoom.HoverState.FillColor = System.Drawing.Color.Green;
             this.btnAddRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddRoom.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddRoom.Location = new System.Drawing.Point(134, 319);
+            this.btnAddRoom.Location = new System.Drawing.Point(134, 388);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(84, 40);
             this.btnAddRoom.TabIndex = 5;
@@ -195,18 +197,54 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(268, 319);
+            this.guna2Button1.Location = new System.Drawing.Point(268, 388);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(84, 40);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Thoát";
             this.guna2Button1.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(111, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Mô tả:";
+            // 
+            // txtDescrip
+            // 
+            this.txtDescrip.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescrip.DefaultText = "";
+            this.txtDescrip.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescrip.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescrip.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescrip.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescrip.FillColor = System.Drawing.SystemColors.Window;
+            this.txtDescrip.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescrip.ForeColor = System.Drawing.Color.Black;
+            this.txtDescrip.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescrip.Location = new System.Drawing.Point(205, 247);
+            this.txtDescrip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescrip.Multiline = true;
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.PasswordChar = '\0';
+            this.txtDescrip.PlaceholderText = "";
+            this.txtDescrip.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescrip.SelectedText = "";
+            this.txtDescrip.Size = new System.Drawing.Size(194, 74);
+            this.txtDescrip.TabIndex = 14;
+            // 
             // AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 402);
+            this.ClientSize = new System.Drawing.Size(494, 466);
+            this.Controls.Add(this.txtDescrip);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnAddRoom);
             this.Controls.Add(this.txtRoomType);
@@ -243,5 +281,7 @@
         private System.Windows.Forms.ComboBox txtRoomType;
         private Guna.UI2.WinForms.Guna2Button btnAddRoom;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txtDescrip;
     }
 }
